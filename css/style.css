@@ -13,13 +13,18 @@
 }
 
 [class*="col-"] {
-
     padding: 10px;
 
+    height: 40px;
     text-align: center;
     border-left: 0.5px solid white;
     border-right: 0.5px solid white;
     background-color: #006CFA;
+}
+
+.nested > [class*="col-"] {
+    height: 100%;
+    padding: 10px;
 }
 
 .internal.row {
@@ -28,10 +33,13 @@
 
 .internal.row * {
     border: 0.5px solid #006CFA;
-
     background-color: #00E165;
 }
 
+.row.height {
+    height: 100px;
+}
 
-
-/* Regole Comuni */
+.row.height div:nth-child(1) {
+    height: 100%;
+}
